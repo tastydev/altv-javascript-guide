@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Sitemap: https:/stuyk.github.io/altv-javascript-guide/sitemap.xml
+Host: https://stuyk.github.io
