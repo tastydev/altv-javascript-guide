@@ -15,7 +15,7 @@
     <meta property="og:url" content="https://stuyk.github.io/altv-javascript-guide/">
     <meta property="og:description" content="An end-to-end guide for using alt:V">
     <meta property="og:article:author" content="stuyk">
-    <link rel="preload" href="/altv-javascript-guide/assets/css/0.styles.0c5cc447.css" as="style"><link rel="preload" href="/altv-javascript-guide/assets/js/app.7fbcc1dd.js" as="script"><link rel="preload" href="/altv-javascript-guide/assets/js/2.5afe2da4.js" as="script"><link rel="preload" href="/altv-javascript-guide/assets/js/3.9165735e.js" as="script"><link rel="preload" href="/altv-javascript-guide/assets/js/18.40a8148c.js" as="script"><link rel="prefetch" href="/altv-javascript-guide/assets/js/10.a21a99ab.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/11.7656e262.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/12.d0de7d9d.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/13.8810eb6c.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/14.9bea7f78.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/15.7ff012f4.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/16.b11bc7c2.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/17.642a9fdf.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/19.bd307a23.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/20.8dfec496.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/21.0bdb9ae6.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/22.6c5fa7b3.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/23.2452b47a.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/24.0d14495e.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/25.53b1d0ae.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/4.2b0f1c26.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/5.6f310ebb.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/6.68f33cd7.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/7.4c5dded2.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/8.2fff4ef1.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/9.c0c2af7e.js">
+    <link rel="preload" href="/altv-javascript-guide/assets/css/0.styles.0c5cc447.css" as="style"><link rel="preload" href="/altv-javascript-guide/assets/js/app.9dc8bd2e.js" as="script"><link rel="preload" href="/altv-javascript-guide/assets/js/2.5afe2da4.js" as="script"><link rel="preload" href="/altv-javascript-guide/assets/js/3.9165735e.js" as="script"><link rel="preload" href="/altv-javascript-guide/assets/js/18.cdec96bf.js" as="script"><link rel="prefetch" href="/altv-javascript-guide/assets/js/10.a21a99ab.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/11.7656e262.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/12.d0de7d9d.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/13.8810eb6c.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/14.9bea7f78.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/15.7ff012f4.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/16.b11bc7c2.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/17.642a9fdf.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/19.bd307a23.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/20.8dfec496.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/21.0bdb9ae6.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/22.6c5fa7b3.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/23.2452b47a.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/24.0d14495e.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/25.53b1d0ae.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/4.2b0f1c26.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/5.6f310ebb.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/6.68f33cd7.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/7.4c5dded2.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/8.bc964ebd.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/9.c0c2af7e.js">
     <link rel="stylesheet" href="/altv-javascript-guide/assets/css/0.styles.0c5cc447.css">
   </head>
   <body>
@@ -45,98 +45,87 @@
     <span class="token keyword">var</span> lengthProperty <span class="token operator">=</span> <span class="token string">'length'</span><span class="token punctuation">;</span>
     <span class="token keyword">var</span> i<span class="token punctuation">,</span> j<span class="token punctuation">;</span> <span class="token comment">// Used as a counter across the whole file</span>
     <span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
-
     <span class="token keyword">var</span> words <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
     <span class="token keyword">var</span> asciiBitLength <span class="token operator">=</span> ascii<span class="token punctuation">[</span>lengthProperty<span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">8</span><span class="token punctuation">;</span>
-
-    <span class="token comment">//* caching results is optional - remove/add slash from front of this line to toggle</span>
-    <span class="token comment">// Initial hash value: first 32 bits of the fractional parts of the square roots of the first 8 primes</span>
-    <span class="token comment">// (we actually calculate the first 64, but extra values are just ignored)</span>
     <span class="token keyword">var</span> hash <span class="token operator">=</span> <span class="token punctuation">(</span>sha256<span class="token punctuation">.</span>h <span class="token operator">=</span> sha256<span class="token punctuation">.</span>h <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment">// Round constants: first 32 bits of the fractional parts of the cube roots of the first 64 primes</span>
     <span class="token keyword">var</span> k <span class="token operator">=</span> <span class="token punctuation">(</span>sha256<span class="token punctuation">.</span>k <span class="token operator">=</span> sha256<span class="token punctuation">.</span>k <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">var</span> primeCounter <span class="token operator">=</span> k<span class="token punctuation">[</span>lengthProperty<span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token comment">/*/
-	var hash = [], k = [];
-	var primeCounter = 0;
-	/</span><span class="token comment">/*/
 
-    var isComposite = {};
-    for (var candidate = 2; primeCounter &lt; 64; candidate++) {
-        if (!isComposite[candidate]) {
-            for (i = 0; i &lt; 313; i += candidate) {
-                isComposite[i] = candidate;
-            }
-            hash[primeCounter] = (mathPow(candidate, 0.5) * maxWord) | 0;
-            k[primeCounter++] = (mathPow(candidate, 1 / 3) * maxWord) | 0;
-        }
-    }
+    <span class="token keyword">var</span> isComposite <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> candidate <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> primeCounter <span class="token operator">&lt;</span> <span class="token number">64</span><span class="token punctuation">;</span> candidate<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>isComposite<span class="token punctuation">[</span>candidate<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">313</span><span class="token punctuation">;</span> i <span class="token operator">+=</span> candidate<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                isComposite<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> candidate<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            hash<span class="token punctuation">[</span>primeCounter<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token function">mathPow</span><span class="token punctuation">(</span>candidate<span class="token punctuation">,</span> <span class="token number">0.5</span><span class="token punctuation">)</span> <span class="token operator">*</span> maxWord<span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token number">0</span><span class="token punctuation">;</span>
+            k<span class="token punctuation">[</span>primeCounter<span class="token operator">++</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token function">mathPow</span><span class="token punctuation">(</span>candidate<span class="token punctuation">,</span> <span class="token number">1</span> <span class="token operator">/</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token operator">*</span> maxWord<span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
 
-    ascii += '\x80'; // Append Ƈ' bit (plus zero padding)
-    while ((ascii[lengthProperty] % 64) - 56) ascii += '\x00'; // More zero padding
-    for (i = 0; i &lt; ascii[lengthProperty]; i++) {
-        j = ascii.charCodeAt(i);
-        if (j &gt;&gt; 8) return; // ASCII check: only accept characters in range 0-255
-        words[i &gt;&gt; 2] |= j &lt;&lt; (((3 - i) % 4) * 8);
-    }
-    words[words[lengthProperty]] = (asciiBitLength / maxWord) | 0;
-    words[words[lengthProperty]] = asciiBitLength;
+    ascii <span class="token operator">+=</span> <span class="token string">'\x80'</span><span class="token punctuation">;</span> <span class="token comment">// Append Ƈ' bit (plus zero padding)</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>ascii<span class="token punctuation">[</span>lengthProperty<span class="token punctuation">]</span> <span class="token operator">%</span> <span class="token number">64</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">56</span><span class="token punctuation">)</span> ascii <span class="token operator">+=</span> <span class="token string">'\x00'</span><span class="token punctuation">;</span> <span class="token comment">// More zero padding</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> ascii<span class="token punctuation">[</span>lengthProperty<span class="token punctuation">]</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        j <span class="token operator">=</span> ascii<span class="token punctuation">.</span><span class="token function">charCodeAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>j <span class="token operator">&gt;&gt;</span> <span class="token number">8</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span> <span class="token comment">// ASCII check: only accept characters in range 0-255</span>
+        words<span class="token punctuation">[</span>i <span class="token operator">&gt;&gt;</span> <span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">|=</span> j <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">3</span> <span class="token operator">-</span> i<span class="token punctuation">)</span> <span class="token operator">%</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    words<span class="token punctuation">[</span>words<span class="token punctuation">[</span>lengthProperty<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span>asciiBitLength <span class="token operator">/</span> maxWord<span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    words<span class="token punctuation">[</span>words<span class="token punctuation">[</span>lengthProperty<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> asciiBitLength<span class="token punctuation">;</span>
 
-    // process each chunk
-    for (j = 0; j &lt; words[lengthProperty]; ) {
-        var w = words.slice(j, (j += 16)); // The message is expanded into 64 words as part of the iteration
-        var oldHash = hash;
-        // This is now the undefinedworking hash&quot;, often labelled as variables a...g
-        // (we have to truncate as well, otherwise extra entries at the end accumulate
-        hash = hash.slice(0, 8);
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> words<span class="token punctuation">[</span>lengthProperty<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> w <span class="token operator">=</span> words<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span>j<span class="token punctuation">,</span> <span class="token punctuation">(</span>j <span class="token operator">+=</span> <span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// The message is expanded into 64 words as part of the iteration</span>
+        <span class="token keyword">var</span> oldHash <span class="token operator">=</span> hash<span class="token punctuation">;</span>
+        <span class="token comment">// This is now the undefinedworking hash&quot;, often labelled as variables a...g</span>
+        <span class="token comment">// (we have to truncate as well, otherwise extra entries at the end accumulate</span>
+        hash <span class="token operator">=</span> hash<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        for (i = 0; i &lt; 64; i++) {
-            var i2 = i + j;
-            // Expand the message into 64 words
-            // Used below if
-            var w15 = w[i - 15],
-                w2 = w[i - 2];
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">64</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">var</span> i2 <span class="token operator">=</span> i <span class="token operator">+</span> j<span class="token punctuation">;</span>
+            <span class="token comment">// Expand the message into 64 words</span>
+            <span class="token comment">// Used below if</span>
+            <span class="token keyword">var</span> w15 <span class="token operator">=</span> w<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                w2 <span class="token operator">=</span> w<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 
-            // Iterate
-            var a = hash[0],
-                e = hash[4];
-            var temp1 =
-                hash[7] +
-                (rightRotate(e, 6) ^ rightRotate(e, 11) ^ rightRotate(e, 25)) + // S1
-                ((e &amp; hash[5]) ^ (~e &amp; hash[6])) + // ch
-                k[i] +
-                // Expand the message schedule if needed
-                (w[i] =
-                    i &lt; 16
-                        ? w[i]
-                        : (w[i - 16] +
-                          (rightRotate(w15, 7) ^ rightRotate(w15, 18) ^ (w15 &gt;&gt;&gt; 3)) + // s0
-                              w[i - 7] +
-                              (rightRotate(w2, 17) ^ rightRotate(w2, 19) ^ (w2 &gt;&gt;&gt; 10))) | // s1
-                          0);
-            // This is only used once, so *could* be moved below, but it only saves 4 bytes and makes things unreadble
-            var temp2 =
-                (rightRotate(a, 2) ^ rightRotate(a, 13) ^ rightRotate(a, 22)) + // S0
-                ((a &amp; hash[1]) ^ (a &amp; hash[2]) ^ (hash[1] &amp; hash[2])); // maj
+            <span class="token comment">// Iterate</span>
+            <span class="token keyword">var</span> a <span class="token operator">=</span> hash<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                e <span class="token operator">=</span> hash<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token keyword">var</span> temp1 <span class="token operator">=</span>
+                hash<span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">]</span> <span class="token operator">+</span>
+                <span class="token punctuation">(</span><span class="token function">rightRotate</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span> <span class="token operator">^</span> <span class="token function">rightRotate</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">)</span> <span class="token operator">^</span> <span class="token function">rightRotate</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token comment">// S1</span>
+                <span class="token punctuation">(</span><span class="token punctuation">(</span>e <span class="token operator">&amp;</span> hash<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">^</span> <span class="token punctuation">(</span><span class="token operator">~</span>e <span class="token operator">&amp;</span> hash<span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token comment">// ch</span>
+                k<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span>
+                <span class="token comment">// Expand the message schedule if needed</span>
+                <span class="token punctuation">(</span>w<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span>
+                    i <span class="token operator">&lt;</span> <span class="token number">16</span>
+                        <span class="token operator">?</span> w<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+                        <span class="token operator">:</span> <span class="token punctuation">(</span>w<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">16</span><span class="token punctuation">]</span> <span class="token operator">+</span>
+                          <span class="token punctuation">(</span><span class="token function">rightRotate</span><span class="token punctuation">(</span>w15<span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">)</span> <span class="token operator">^</span> <span class="token function">rightRotate</span><span class="token punctuation">(</span>w15<span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">)</span> <span class="token operator">^</span> <span class="token punctuation">(</span>w15 <span class="token operator">&gt;&gt;&gt;</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token comment">// s0</span>
+                              w<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">7</span><span class="token punctuation">]</span> <span class="token operator">+</span>
+                              <span class="token punctuation">(</span><span class="token function">rightRotate</span><span class="token punctuation">(</span>w2<span class="token punctuation">,</span> <span class="token number">17</span><span class="token punctuation">)</span> <span class="token operator">^</span> <span class="token function">rightRotate</span><span class="token punctuation">(</span>w2<span class="token punctuation">,</span> <span class="token number">19</span><span class="token punctuation">)</span> <span class="token operator">^</span> <span class="token punctuation">(</span>w2 <span class="token operator">&gt;&gt;&gt;</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token comment">// s1</span>
+                          <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment">// This is only used once, so *could* be moved below, but it only saves 4 bytes and makes things unreadble</span>
+            <span class="token keyword">var</span> temp2 <span class="token operator">=</span>
+                <span class="token punctuation">(</span><span class="token function">rightRotate</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">^</span> <span class="token function">rightRotate</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">)</span> <span class="token operator">^</span> <span class="token function">rightRotate</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token comment">// S0</span>
+                <span class="token punctuation">(</span><span class="token punctuation">(</span>a <span class="token operator">&amp;</span> hash<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">^</span> <span class="token punctuation">(</span>a <span class="token operator">&amp;</span> hash<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">^</span> <span class="token punctuation">(</span>hash<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">&amp;</span> hash<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// maj</span>
 
-            hash = [(temp1 + temp2) | 0].concat(hash); // We don't bother trimming off the extra ones, they're harmless as long as we're truncating when we do the slice()
-            hash[4] = (hash[4] + temp1) | 0;
-        }
+            hash <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">(</span>temp1 <span class="token operator">+</span> temp2<span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span>hash<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// We don't bother trimming off the extra ones, they're harmless as long as we're truncating when we do the slice()</span>
+            hash<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span>hash<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span> <span class="token operator">+</span> temp1<span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
 
-        for (i = 0; i &lt; 8; i++) {
-            hash[i] = (hash[i] + oldHash[i]) | 0;
-        }
-    }
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">8</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            hash<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span>hash<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> oldHash<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
 
-    for (i = 0; i &lt; 8; i++) {
-        for (j = 3; j + 1; j--) {
-            var b = (hash[i] &gt;&gt; (j * 8)) &amp; 255;
-            result += (b &lt; 16 ? 0 : '') + b.toString(16);
-        }
-    }
-    return result;
-}
-</span></code></pre></div><h2 id="example-usage"><a href="#example-usage" class="header-anchor">#</a> Example Usage</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token function">sha256</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">test</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">8</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>j <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">;</span> j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> j<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token punctuation">(</span>hash<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&gt;&gt;</span> <span class="token punctuation">(</span>j <span class="token operator">*</span> <span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span> <span class="token number">255</span><span class="token punctuation">;</span>
+            result <span class="token operator">+=</span> <span class="token punctuation">(</span>b <span class="token operator">&lt;</span> <span class="token number">16</span> <span class="token operator">?</span> <span class="token number">0</span> <span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token operator">+</span> b<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="example-usage"><a href="#example-usage" class="header-anchor">#</a> Example Usage</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token function">sha256</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">test</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
             ←
@@ -147,6 +136,6 @@ console<span class="token punctuation">.</span><span class="token function">log<
             </a>
             →
         </span></p></div> </main></div><div class="global-ui"></div></div>
-    <script src="/altv-javascript-guide/assets/js/app.7fbcc1dd.js" defer></script><script src="/altv-javascript-guide/assets/js/2.5afe2da4.js" defer></script><script src="/altv-javascript-guide/assets/js/3.9165735e.js" defer></script><script src="/altv-javascript-guide/assets/js/18.40a8148c.js" defer></script>
+    <script src="/altv-javascript-guide/assets/js/app.9dc8bd2e.js" defer></script><script src="/altv-javascript-guide/assets/js/2.5afe2da4.js" defer></script><script src="/altv-javascript-guide/assets/js/3.9165735e.js" defer></script><script src="/altv-javascript-guide/assets/js/18.cdec96bf.js" defer></script>
   </body>
 </html>
