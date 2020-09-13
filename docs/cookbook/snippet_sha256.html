@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Pure JS SHA256 | alt:V JavaScript Tutorials</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <script data-ad-client="ca-pub-3314445478682546" async="true" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta name="description" content="Tutorials for the alt:V Framework in JavaScript">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta property="og:title" content="Stuyk's alt:V Guide">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://stuyk.github.io/altv-javascript-guide/">
+    <meta property="og:description" content="An end-to-end guide for using alt:V">
+    <meta property="og:article:author" content="stuyk">
+    <link rel="preload" href="/altv-javascript-guide/assets/css/0.styles.0c5cc447.css" as="style"><link rel="preload" href="/altv-javascript-guide/assets/js/app.7fbcc1dd.js" as="script"><link rel="preload" href="/altv-javascript-guide/assets/js/2.5afe2da4.js" as="script"><link rel="preload" href="/altv-javascript-guide/assets/js/3.9165735e.js" as="script"><link rel="preload" href="/altv-javascript-guide/assets/js/18.40a8148c.js" as="script"><link rel="prefetch" href="/altv-javascript-guide/assets/js/10.a21a99ab.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/11.7656e262.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/12.d0de7d9d.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/13.8810eb6c.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/14.9bea7f78.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/15.7ff012f4.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/16.b11bc7c2.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/17.642a9fdf.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/19.bd307a23.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/20.8dfec496.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/21.0bdb9ae6.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/22.6c5fa7b3.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/23.2452b47a.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/24.0d14495e.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/25.53b1d0ae.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/4.2b0f1c26.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/5.6f310ebb.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/6.68f33cd7.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/7.4c5dded2.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/8.2fff4ef1.js"><link rel="prefetch" href="/altv-javascript-guide/assets/js/9.c0c2af7e.js">
+    <link rel="stylesheet" href="/altv-javascript-guide/assets/css/0.styles.0c5cc447.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/altv-javascript-guide/" class="home-link router-link-active"><!----> <span class="site-name">alt:V JavaScript Tutorials</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/altv-javascript-guide/docs/introduction/" class="nav-link">
+  Start Learning
+</a></div><div class="nav-item"><a href="https://altv.mp" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  alt:V Website
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://patreon.com/stuyk" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Support Stuyk
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/stuyk/altv-javascript-guide" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/altv-javascript-guide/docs/introduction/" class="nav-link">
+  Start Learning
+</a></div><div class="nav-item"><a href="https://altv.mp" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  alt:V Website
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><a href="https://patreon.com/stuyk" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Support Stuyk
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <a href="https://github.com/stuyk/altv-javascript-guide" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Guide</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading"><span>🚀 Introduction</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/altv-javascript-guide/docs/introduction/" class="sidebar-link">Summary</a></li><li><a href="/altv-javascript-guide/docs/introduction/installing_altv.html" class="sidebar-link">Installing Server Files</a></li><li><a href="/altv-javascript-guide/docs/introduction/debugging.html" class="sidebar-link">Setup Client Debugging</a></li><li><a href="/altv-javascript-guide/docs/introduction/javascript_primer.html" class="sidebar-link">JavaScript Primer</a></li></ul></section></li><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading"><span>📄 API Guide</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/altv-javascript-guide/docs/api/" class="sidebar-link">Introduction to API</a></li><li><a href="/altv-javascript-guide/docs/api/classes.html" class="sidebar-link">Classes</a></li><li><a href="/altv-javascript-guide/docs/api/arrays.html" class="sidebar-link">Special Arrays</a></li><li><a href="/altv-javascript-guide/docs/api/events.html" class="sidebar-link">Events</a></li></ul></section></li><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading"><span>💡 Events</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/altv-javascript-guide/docs/events/" class="sidebar-link">Introduction to Events</a></li><li><a href="/altv-javascript-guide/docs/events/using_events.html" class="sidebar-link">Using Events</a></li><li><a href="/altv-javascript-guide/docs/events/good_practice.html" class="sidebar-link">Event Gotcha's</a></li></ul></section></li><li><section class="sidebar-group is-sub-group depth-1"><p class="sidebar-heading open"><span>📚 Cookbook</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/altv-javascript-guide/docs/cookbook/" aria-current="page" class="sidebar-link">Snippets</a></li><li><a href="/altv-javascript-guide/docs/cookbook/snippet_drawtext.html" class="sidebar-link">Drawing Text 3D &amp; 2D</a></li><li><a href="/altv-javascript-guide/docs/cookbook/snippet_math.html" class="sidebar-link">Math &amp; Distance</a></li><li><a href="/altv-javascript-guide/docs/cookbook/snippet_prototyping.html" class="sidebar-link">Prototyping</a></li><li><a href="/altv-javascript-guide/docs/cookbook/snippet_encryption.html" class="sidebar-link">Encryption / Password Hashing</a></li><li><a href="/altv-javascript-guide/docs/cookbook/snippet_sha256.html" aria-current="page" class="active sidebar-link">Pure JS SHA256</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/altv-javascript-guide/docs/cookbook/snippet_sha256.html#example-usage" class="sidebar-link">Example Usage</a></li></ul></li><li><a href="/altv-javascript-guide/docs/cookbook/snippet_shuffle.html" class="sidebar-link">Shuffle Array</a></li></ul></section></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="pure-js-sha256"><a href="#pure-js-sha256" class="header-anchor">#</a> Pure JS SHA256</h1> <p>If you need a hashing algorithm that works on client and server side this is it.</p> <p>This was created by <a href="https://username1565.github.io/sha256/" target="_blank" rel="noopener noreferrer">https://username1565.github.io/sha256/<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">sha256</span><span class="token punctuation">(</span><span class="token parameter">ascii</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">function</span> <span class="token function">rightRotate</span><span class="token punctuation">(</span><span class="token parameter">value<span class="token punctuation">,</span> amount</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">(</span>value <span class="token operator">&gt;&gt;&gt;</span> amount<span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token punctuation">(</span>value <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span><span class="token number">32</span> <span class="token operator">-</span> amount<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">var</span> mathPow <span class="token operator">=</span> Math<span class="token punctuation">.</span>pow<span class="token punctuation">;</span>
+    <span class="token keyword">var</span> maxWord <span class="token operator">=</span> <span class="token function">mathPow</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> lengthProperty <span class="token operator">=</span> <span class="token string">'length'</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> i<span class="token punctuation">,</span> j<span class="token punctuation">;</span> <span class="token comment">// Used as a counter across the whole file</span>
+    <span class="token keyword">var</span> result <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">var</span> words <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> asciiBitLength <span class="token operator">=</span> ascii<span class="token punctuation">[</span>lengthProperty<span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">8</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//* caching results is optional - remove/add slash from front of this line to toggle</span>
+    <span class="token comment">// Initial hash value: first 32 bits of the fractional parts of the square roots of the first 8 primes</span>
+    <span class="token comment">// (we actually calculate the first 64, but extra values are just ignored)</span>
+    <span class="token keyword">var</span> hash <span class="token operator">=</span> <span class="token punctuation">(</span>sha256<span class="token punctuation">.</span>h <span class="token operator">=</span> sha256<span class="token punctuation">.</span>h <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// Round constants: first 32 bits of the fractional parts of the cube roots of the first 64 primes</span>
+    <span class="token keyword">var</span> k <span class="token operator">=</span> <span class="token punctuation">(</span>sha256<span class="token punctuation">.</span>k <span class="token operator">=</span> sha256<span class="token punctuation">.</span>k <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> primeCounter <span class="token operator">=</span> k<span class="token punctuation">[</span>lengthProperty<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token comment">/*/
+	var hash = [], k = [];
+	var primeCounter = 0;
+	/</span><span class="token comment">/*/
+
+    var isComposite = {};
+    for (var candidate = 2; primeCounter &lt; 64; candidate++) {
+        if (!isComposite[candidate]) {
+            for (i = 0; i &lt; 313; i += candidate) {
+                isComposite[i] = candidate;
+            }
+            hash[primeCounter] = (mathPow(candidate, 0.5) * maxWord) | 0;
+            k[primeCounter++] = (mathPow(candidate, 1 / 3) * maxWord) | 0;
+        }
+    }
+
+    ascii += '\x80'; // Append Ƈ' bit (plus zero padding)
+    while ((ascii[lengthProperty] % 64) - 56) ascii += '\x00'; // More zero padding
+    for (i = 0; i &lt; ascii[lengthProperty]; i++) {
+        j = ascii.charCodeAt(i);
+        if (j &gt;&gt; 8) return; // ASCII check: only accept characters in range 0-255
+        words[i &gt;&gt; 2] |= j &lt;&lt; (((3 - i) % 4) * 8);
+    }
+    words[words[lengthProperty]] = (asciiBitLength / maxWord) | 0;
+    words[words[lengthProperty]] = asciiBitLength;
+
+    // process each chunk
+    for (j = 0; j &lt; words[lengthProperty]; ) {
+        var w = words.slice(j, (j += 16)); // The message is expanded into 64 words as part of the iteration
+        var oldHash = hash;
+        // This is now the undefinedworking hash&quot;, often labelled as variables a...g
+        // (we have to truncate as well, otherwise extra entries at the end accumulate
+        hash = hash.slice(0, 8);
+
+        for (i = 0; i &lt; 64; i++) {
+            var i2 = i + j;
+            // Expand the message into 64 words
+            // Used below if
+            var w15 = w[i - 15],
+                w2 = w[i - 2];
+
+            // Iterate
+            var a = hash[0],
+                e = hash[4];
+            var temp1 =
+                hash[7] +
+                (rightRotate(e, 6) ^ rightRotate(e, 11) ^ rightRotate(e, 25)) + // S1
+                ((e &amp; hash[5]) ^ (~e &amp; hash[6])) + // ch
+                k[i] +
+                // Expand the message schedule if needed
+                (w[i] =
+                    i &lt; 16
+                        ? w[i]
+                        : (w[i - 16] +
+                          (rightRotate(w15, 7) ^ rightRotate(w15, 18) ^ (w15 &gt;&gt;&gt; 3)) + // s0
+                              w[i - 7] +
+                              (rightRotate(w2, 17) ^ rightRotate(w2, 19) ^ (w2 &gt;&gt;&gt; 10))) | // s1
+                          0);
+            // This is only used once, so *could* be moved below, but it only saves 4 bytes and makes things unreadble
+            var temp2 =
+                (rightRotate(a, 2) ^ rightRotate(a, 13) ^ rightRotate(a, 22)) + // S0
+                ((a &amp; hash[1]) ^ (a &amp; hash[2]) ^ (hash[1] &amp; hash[2])); // maj
+
+            hash = [(temp1 + temp2) | 0].concat(hash); // We don't bother trimming off the extra ones, they're harmless as long as we're truncating when we do the slice()
+            hash[4] = (hash[4] + temp1) | 0;
+        }
+
+        for (i = 0; i &lt; 8; i++) {
+            hash[i] = (hash[i] + oldHash[i]) | 0;
+        }
+    }
+
+    for (i = 0; i &lt; 8; i++) {
+        for (j = 3; j + 1; j--) {
+            var b = (hash[i] &gt;&gt; (j * 8)) &amp; 255;
+            result += (b &lt; 16 ? 0 : '') + b.toString(16);
+        }
+    }
+    return result;
+}
+</span></code></pre></div><h2 id="example-usage"><a href="#example-usage" class="header-anchor">#</a> Example Usage</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> result <span class="token operator">=</span> <span class="token function">sha256</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">test</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+            ←
+            <a href="/altv-javascript-guide/docs/cookbook/snippet_encryption.html" class="prev">
+                Encryption / Password Hashing
+            </a></span> <span class="next"><a href="/altv-javascript-guide/docs/cookbook/snippet_shuffle.html">
+                Shuffle Array
+            </a>
+            →
+        </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/altv-javascript-guide/assets/js/app.7fbcc1dd.js" defer></script><script src="/altv-javascript-guide/assets/js/2.5afe2da4.js" defer></script><script src="/altv-javascript-guide/assets/js/3.9165735e.js" defer></script><script src="/altv-javascript-guide/assets/js/18.40a8148c.js" defer></script>
+  </body>
+</html>
