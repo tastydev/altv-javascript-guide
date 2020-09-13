@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
-Sitemap: https:/stuyk.github.io/altv-javascript-guide/sitemap.xml
-Host: https://stuyk.github.io
+Sitemap: https:/altv.stuyk.com/sitemap.xml
+Host: https://altv.stuyk.com
